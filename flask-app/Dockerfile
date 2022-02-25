@@ -1,8 +1,8 @@
 #Use Python 3.6 as a base image
-FROM PYTHON:3.6
+FROM python:3.6
 # Copy contents into image
  WORKDIR /trio_task
- COPY app.py requirements.txt
+ COPY app.py requirements.txt ./
 # install pip dependencies from requirements file
  RUN pip3 install -r requirements.txt
 # Expose correct port
